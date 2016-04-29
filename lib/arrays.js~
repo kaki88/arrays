@@ -1,0 +1,66 @@
+
+/** 
+ * Return the number of elements in an array
+ */
+var count = function(array) {
+	return array.length;
+}
+
+var min = function(array) {
+	var data = array.slice(0);
+	data.sort(function(a, b){return a-b});
+	return data[0];
+}
+
+
+var max = function(array) {
+	//Expliquer pourquoi on doit appeler slice.. avoir une fonction clone...
+	var data = array.slice(0);
+	data.sort(function(a, b){return b-a});
+	return data[0];
+}
+
+
+var sum = function(array) {
+	var data = 0;
+	for (var i = 0; i < array.length; i++) {
+		data += array[i];
+	}
+	return data;
+}
+
+
+var mean = function(array) {
+	return sum(array)/count(array);
+}
+
+
+var pos = function(array,number){
+	var index = array.indexOf(number);
+	return index+1;
+}
+
+
+var filterNeg = function(array){
+	return array.filter(function(number){
+		return number >= 0;
+	});
+}
+
+var augment = function(array,value){
+	var data = array.slice();
+   // data.splice(array.length,0,value);
+     data.push(value);
+    return data;
+}
+
+
+
+module.exports.min = min;
+module.exports.max = max;
+module.exports.count = count;
+module.exports.sum = sum;
+module.exports.mean = mean;
+module.exports.pos = pos;
+module.exports.filterNeg = filterNeg;
+module.exports.augment = augment;
