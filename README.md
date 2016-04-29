@@ -1,6 +1,7 @@
 # Arrays
 
 L' objectif de ce coding dojo est de vous familiariser avec les tableaux en javascript.
+Faites un fork de ce projet et suivez les instructions
 
 Dans le fichier lib/arrays.js, vous devez implémenter les fonctions suivantes:
 
